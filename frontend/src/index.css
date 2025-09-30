@@ -1,0 +1,49 @@
+/* Font family */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "leaflet/dist/leaflet.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Custom Properties */
+:root {
+  --sidebar-width: 280px;
+  --header-height: 80px;
+  --footer-height: 60px;
+}
+
+/* Smooth animations */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom focus styles */
+.focus-herbalife:focus {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+}
+
+/* Ant Design Dropdown z-index fix */
+.ant-dropdown {
+  z-index: 9999 !important;
+}
+
+.ant-dropdown-menu {
+  z-index: 9999 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Ensure dropdown content is visible above all other elements */
+.ant-dropdown-content {
+  z-index: 9999 !important;
+}
+
+/* Override global transition for dropdown elements */
+.ant-dropdown,
+.ant-dropdown-menu,
+.ant-dropdown-menu-item,
+.ant-dropdown-menu-submenu {
+  transition: none !important;
+}

@@ -1,0 +1,1 @@
+import{h as a}from"./http-DPEUiF5q.js";const r={async listByEvent(t){const{data:e}=await a.get(`/guests/event/${t}`);return e},async create(t){const{data:e}=await a.post("/guests",t);return e},async update(t,e){const{data:s}=await a.put(`/guests/${t}`,e);return s},async remove(t){await a.delete(`/guests/${t}`)}};export{r as g};
